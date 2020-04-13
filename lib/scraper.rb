@@ -41,3 +41,4 @@ binding.pry
 # html = Nokogiri::HTML(open(https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html))
 # html.css("social-icon-container").first.value
 end
+html.css("d.social-icon-containera").first
