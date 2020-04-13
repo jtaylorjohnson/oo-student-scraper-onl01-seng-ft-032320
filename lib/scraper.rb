@@ -23,8 +23,8 @@ class Scraper
     student_profile = {}
     
     html = Nokogiri::HTML(open(profile_url))
-binding.pry
-    html.css("social-icon-container").each do |social|
+
+    html.css("div.main-wrapper.profile .social-icon-container a").each do |social|
       if social.attribute("href").value.include?("twitter")
         student_profile[:twitter] = social.attribute("href").value
       elsif social.attribute("href").value.include?("linkedin")
@@ -36,10 +36,5 @@ binding.pry
       end
     end
   end
-# Twitter URL, LinkedIn URL, GitHub URL, 
-# blog URL, profile quote, and bio
-# html = Nokogiri::HTML(open(https://learn-co-curriculum.github.io/student-scraper-test-page/students/ryan-johnson.html))
-# html.css("social-icon-container").first.value
+
 end
-html.css("d.social-icon-container a").first
-html.css("div.main-wrapper.profile .social-icon-container a").first.attribute("href").value
