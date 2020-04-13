@@ -42,3 +42,4 @@ binding.pry
 # html.css("social-icon-container").first.value
 end
 html.css("d.social-icon-container a").first
+html.css("div.main-wrapper.profile .social-icon-container a").first.attribute("href").value
